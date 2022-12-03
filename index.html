@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset='utf-8'>
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+        <title>Page Title</title>
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
+        <link rel='stylesheet' type='text/css' media='screen' href='css/main.css'>
+        <script src='main.js'></script>
+    </head>
+
+    <body>
+
+        <nav>
+            <div class="nav-content">
+                <div class="nav-item"><a href="#1">home</a></div>
+                <div class="nav-item"><a href="#2">about</a> </div>
+                <div class="nav-item"><a href="#3">menu</a> </div>
+                <div class="nav-item"><a href="#4">where</a> </div>
+            </div>
+        </nav>
+        <div class="home" id="1">
+            <div class="middel-text">
+                the <br>cofe
+            </div>
+            <div class="right-text">15 Adr street, 5015</div>
+            <div class="left-text">Open from 6am to 5pm</div>
+        </div>
+
+        <div class="content">
+            <section class="about" id="2">
+                <span class="title">ABOUT THE CAFE</span>
+                <div>The Cafe was founded in blabla by Mr. Smith in lorem ipsum dolor sit amet, consectetur adipiscing
+                    elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                    exercitation ullamco laboris
+                    nisi ut aliquip ex ea commodo consequat.</div>
+                <div>In addition to our full espresso and brew bar menu, we serve fresh made-to-order breakfast and
+                    lunch sandwiches, as well
+                    as a selection of sides and salads and other good stuff.</div>
+                <div class="spesheal">"Use products from nature for what it's worth - but never too early, nor too
+                    late." Fresh is the new sweet. <br><br>
+                    Chef, Coffeeist and Owner: Liam Brown</div>
+                <img src="images/coffeeshop.jpg" alt="">
+                <span><span class="strong">Opening hours: </span>everyday from 6am to 5pm.</span>
+                <br><br>
+                <span><span class="strong">Address: </span>15 Adr street, 5015, NY</span>
+            </section>
+
+            <section class="menu" id="3">
+                <span class="title">THE MENU</span>
+                <div class="eat-drink">
+                    <div class="head">
+                        <button class="eat-button" onclick="hideDrink()" aria-checked="true" id="eat-btn">eat</button>
+                        <button class="drink-button" onclick="hideEat()" id="drink-btn">drink</button>
+                    </div>
+
+                    <div class="eat" id=eat>
+                        <div class="eat-content">
+                            <div class="first"> Bread Basket</div>
+                            Assortment of fresh baked fruit breads and muffins 5.50
+                        </div>
+                        <div class="eat-content">
+                            <div class="first">
+                                Honey Almond Granola with Fruits
+                            </div> Natural cereal of honey toasted oats, raisins, almonds and dates 7.00
+                        </div>
+                        <div class="eat-content">
+                            <div class="first">
+                                Belgian Waffle</div>
+                            Vanilla flavored batter with malted flour 7.50
+                        </div>
+                        <div class="eat-content">
+                            <div class="first">
+                                Scrambled eggs
+                            </div> Scrambled eggs, roasted red pepper and garlic, with green onions 7.50
+                        </div>
+                        <div class="eat-content">
+                            <div class="first">
+                                Blueberry Pancakes
+                            </div> With syrup, butter and lots of berries 8.50
+                        </div>
+                    </div>
+                    <div class="drink" id="drink">
+                        <div class="eat-content">
+                            <div class="first"> Coffee</div>
+                            Regular coffee 2.50
+                        </div>
+                        <div class="eat-content">
+                            <div class="first">
+                                Chocolato
+                            </div> Chocolate espresso with milk 4.50
+                        </div>
+                        <div class="eat-content">
+                            <div class="first">
+                                Corretto</div>
+                            Whiskey and coffee 5.00
+                        </div>
+                        <div class="eat-content">
+                            <div class="first">
+                                Iced tea
+                            </div> Hot tea, except not hot 3.00
+                        </div>
+                        <div class="eat-content">
+                            <div class="first">
+                                Soda </div> Coke, Sprite, Fanta, etc. 2.50
+                        </div>
+                    </div>
+                </div>
+
+                <script>
+                    function hideDrink() {
+                        document.getElementById("eat-btn").style.color = "#fff";
+                        document.getElementById("eat-btn").style.backgroundColor = "#000";
+                        document.getElementById("drink-btn").style.color = "#000";
+                        document.getElementById("drink-btn").style.backgroundColor = "#fff";
+
+                        document.getElementById("drink").style.display = "none";
+                        document.getElementById("eat").style.display = "block";
+
+                    }
+
+                    function hideEat() {
+                        document.getElementById("eat-btn").style.color = "#000";
+                        document.getElementById("eat-btn").style.backgroundColor = "#fff";
+                        document.getElementById("drink-btn").style.color = "#fff";
+                        document.getElementById("drink-btn").style.backgroundColor = "#000";
+
+                        document.getElementById("eat").style.display = "none";
+                        document.getElementById("drink").style.display = "block";
+                    }
+                </script>
+
+                <img src="images/coffeehouse2.jpg" alt="">
+            </section>
+            <section class="where" id="4">
+                <span class="title">WHERE TO FIND US</span>
+                <span>Find us at some address at some place.</span>
+                <img src="images/map.jpg" alt="">
+                <div> <span> FYI!</span> We offer full-service catering for any event, large or small. We understand
+                    your needs and we
+                    will cater the food to satisfy the biggerst criteria of them all, both look and taste.</div>
+                <div> <strong>Reserve</strong> a table, ask for today's special or just send us a message:</div>
+
+                <form action="">
+                    <input type="text" placeholder="Name">
+                    <br>
+                    <input type="number">
+                    <br>
+                    <input type="date" placeholder="11/6/2021 08:00 PM">
+                    <br>
+                    <input type="text" placeholder="Message/Specail reqirment">
+                    <button>send message</button>
+                </form>
+            </section>
+        </div>
+
+        <footer></footer>
+    </body>
+
+</html>
